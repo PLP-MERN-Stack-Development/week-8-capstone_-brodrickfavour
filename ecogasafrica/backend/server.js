@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: false })); // For parsing URL-encoded dat
 const allowedOrigins = [
   'http://localhost:3000', // Your local frontend (e.g., Create React App)
   'http://localhost:5173', // Your local frontend (e.g., Vite)
-  process.env.ecogasafrica_up_railway_app, // Your deployed frontend URL from Railway
+  process.env.FRONTEND_URL, // Your deployed frontend URL (set in .env or Railway)
 ].filter(Boolean); // Removes any falsy values like undefined if FRONTEND_URL is not set
 
 const corsOptions = {
