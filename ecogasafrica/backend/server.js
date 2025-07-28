@@ -31,14 +31,7 @@ const allowedOrigins = [
 ].filter(Boolean); // Removes any falsy values like undefined if FRONTEND_URL is not set
 
 const corsOptions = {
-  origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps or curl requests) or from the whitelist
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: allowedOrigins,
   credentials: true, // Important for sending cookies or auth headers
 };
 
