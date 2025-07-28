@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api', // Adjust base URL for deployment
+  baseURL: import.meta.env.VITE_API_URL || 'https://backend-production-adb6.up.railway.app', // Adjust base URL for deployment
 });
 
 // Add a request interceptor to include the JWT token
