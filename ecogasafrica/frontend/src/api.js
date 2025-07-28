@@ -18,3 +18,4 @@ const api = axios.create({
 
 // Add a request interceptor to include the JWT token
 
+export default api;
