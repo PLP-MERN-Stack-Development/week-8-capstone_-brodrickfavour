@@ -9,7 +9,7 @@ const getBaseURL = () => {
     return import.meta.env.VITE_API_URL || 'https://backend-production-adb6.up.railway.app/';
   }
   // In development, use local backend
-  return 'https://backend-production-adb6.up.railway.app/';
+  return 'http://localhost:5000';
 };
 
 const api = axios.create({
