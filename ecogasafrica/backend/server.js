@@ -40,10 +40,10 @@ app.use(cors(corsOptions));
 // app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/posts', postRoutes);
-app.use('/api/kits', kitRoutes);
-app.use('/api/contact', contactRoutes);
+app.use('/auth', authRoutes);
+app.use('/posts', postRoutes);
+app.use('/kits', kitRoutes);
+app.use('/contact', contactRoutes);
 
 // Basic route for testing
 app.get('/', (req, res) => {
