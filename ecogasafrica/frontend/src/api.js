@@ -5,10 +5,10 @@ import axios from 'axios';
 const getBaseURL = () => {
   // In a production build (npm run build), Vite sets import.meta.env.PROD to true.
   if (import.meta.env.PROD) {
-    // Use the production URL from environment variables.
-    return import.meta.env.VITE_API_URL || 'https://backend-production-adb6.up.railway.app';
+    // Use the production URL from environment variables, fallback to a default if not set
+    return import.meta.env.VITE_API_URL || 'https://backend-production-adb6.up.railway.app/';
   }
-  // In development (npm run dev), default to the local backend server.
+  // In development, use local backend
   return 'http://localhost:5000';
 };
 
